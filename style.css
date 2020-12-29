@@ -1,0 +1,173 @@
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color:#fff;
+}
+body{
+    height: 100vh;
+    overflow-x: hidden;
+    padding: 1px;
+}
+.universal-div{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #5DCAFA;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.universal-div header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5AD3FB;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+    padding: 5px 10px;
+    flex-wrap: wrap;
+}
+.universal-div header .head{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.universal-div header .head i{
+    position: absolute;
+    top:15px;
+    right: 20px;
+    color: #343260;
+    font-size: 1.3rem;
+    opacity: 0.8;
+}
+
+.universal-div header img{
+    height: 50px;
+    margin-left: 5px;
+}
+body header  input{
+    box-sizing: border-box;
+    padding: 10px 20px;
+    font-size: larger;
+    width: 100%;
+    color: black;
+    margin: 0 5px;
+    margin-left: 30px;
+}
+hr{
+    width: 0;
+    background-color: #343260;
+    border: 1px solid #343260;
+    margin: 0 5px 0 0px;
+}
+/* section css */
+section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    height: 100%;
+     margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5AD3FB;
+    width: 400px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+
+.card .card-head .location{
+    font-size: 1.5rem;
+}
+.card .info-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.card .info-section .info-section-head{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+
+}
+.card .info-section .info-section-head .current-temp{
+    font-size: 4rem;
+    color: #343260;
+}
+.card .info-section .info-section-head .current-temp sup{
+    color: #343260;
+}
+
+.card .info-section .info-section-head .description{
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+.card .info-section img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    transition: all 0.4s;
+}
+.card .info-section .other-info {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+.card .info-section .humid-wind-pressure{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.card .info-section .humid-wind-pressure div{
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    width: 80px;
+}
+.card .info-section .humid-wind-pressure div p{
+    padding: 5px;
+}
+@media(max-width:424px){
+    body header .head form input{
+        width: 100%;
+    }
+    /* body header select{
+        width: 100%;
+    } */
+}
+@media(max-width:510px){
+    .card{
+        width: 90%;
+    }
+}
+.dark-color{
+    color:#343260;
+}
+.nothing-found{
+    position: fixed;
+    z-index: 1000;
+    color: b#fff;
+    top: 50%;
+    background-color: #343260;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    transition: 0.3s all;
+    transform: translateY(-100vh);
+}
+.backdrop{
+    position: fixed;
+    background-color: #00000088;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 999;
+}

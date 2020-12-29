@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather info</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- used for google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- used fro some icon -->
+    <script src="https://kit.fontawesome.com/f6c3fc38d8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="universal-div">
+        <!-- Header section for logo and search input feild -->
+        <header>
+            <div class="head">
+                <img  src="images/logo.png" />
+                        <input autocomplete="off" id="input" placeholder="Enter city" />
+                        <i class="fas fa-search"></i>
+            </div>
+        </header>
+        <!-- this section contains whole card show below header -->
+        <section>
+            <div class="card">
+                <div class="card-head">
+                    <div class="location">
+                        <i class="dark-color fas fa-map-marker-alt"></i>
+                        <span id="cityName">Bhopal</span>
+                    </div>
+                </div>
+                <div class="info-section">
+                    <div class="info-section-head">
+                        <!-- image according to Weather condition -->
+                        <img id='whetherImage' src="http://openweathermap.org/img/wn/10d@2x.png" />
+                        <p class="current-temp text">30<sup>o</sup>C</p>
+                        <p class="description">Clear sky</p>
+                    </div>
+                    <div class="other-info">
+                        <p class="min-temp">min 20<sup>o</sup>C</p>
+                        <p class="max-temp">max 2<sup>o</sup>C</p>
+                    </div>
+                    <div class="humid-wind-pressure">
+                        <div class="wind">
+                            <i class="fas fa-wind"></i>
+                            <p>3.8km/h</p>
+                        </div>
+                        <div class="humid">
+                            <i class="fas fa-tint"></i>
+                            <p>100%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="nothing-found">City Not Found</p>
+        <div class="backdrop">
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
