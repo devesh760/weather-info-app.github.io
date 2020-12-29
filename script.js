@@ -39,17 +39,13 @@ window.onload = function (){
 function currentCityWeatherApiCall(latitude,longitude){
     let searchapi = GET_BY_COORD.replace('latitude',latitude);
     searchapi = searchapi.replace('longitude',longitude);
-    console.log(searchapi);
-    console.log(latitude,longitude);
     fetch(searchapi).then(responce=>responce.json())
     .then(data=>{
-        console.log(data)
         showCityData(data);
     })
 }
 // This function is used for search api call which also check, is searched city in database or not
 function searchapi(e){
-    console.log(e.code)
     let toSearch='';
     if (e.code !== "Enter") {
         return;
@@ -58,7 +54,6 @@ function searchapi(e){
     inputField.value = "";
     let searchapi = SEARCH_BY_CITY_NAME.replace('bhopal',toSearch);
     const responce = fetch(searchapi).then(responce=>responce.json()).then((data)=>{
-        console.log(data);
         if(data.cod == 404){
             showNothingDialog();
         }
@@ -73,12 +68,10 @@ function showCityData(data){
     cityName.innerText = data.name;
     let src = ICON_API.replace('10d',data.weather[0].icon);
     image.src = src;
-    console.log(image.src)
     currentTemp.innerHTML =getTempInCelcius(data.main.temp)
     description.innerText = data.weather[0].description;
     minMax.children[0].innerHTML = 'min '+ getTempInCelcius(data.main.temp_min); 
     minMax.children[1].innerHTML = 'max '+ getTempInCelcius(data.main.temp_max); 
-    console.log(humidWindPressure)
     humidWindPressure.children[0].children[1].nnerHTML = data.wind.speed + ' km/h'
     humidWindPressure.children[1].children[1].innerHTML = data.main.humidity + ' %'
 }
