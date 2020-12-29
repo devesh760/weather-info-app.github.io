@@ -1,11 +1,11 @@
 // Replace bhopal by city search name
-const SEARCH_BY_CITY_NAME = "http://api.openweathermap.org/data/2.5/weather?q=bhopal&appid=5e9a44add76acccd4dd712d72ae46bc2";
+const SEARCH_BY_CITY_NAME = "https://api.openweathermap.org/data/2.5/weather?q=bhopal&appid=5e9a44add76acccd4dd712d72ae46bc2";
 
 // To get weather info of current coordinates by replacing longitude and latitude
-const GET_BY_COORD = "http://api.openweathermap.org/data/2.5/weather?lat=latitude&lon=longitude&appid=5e9a44add76acccd4dd712d72ae46bc2"
+const GET_BY_COORD = "https://api.openweathermap.org/data/2.5/weather?lat=latitude&lon=longitude&appid=5e9a44add76acccd4dd712d72ae46bc2"
 
 // Replace 10d by current icon id
-const ICON_API = "http://openweathermap.org/img/wn/10d@2x.png";
+const ICON_API = "https://openweathermap.org/img/wn/10d@2x.png";
 
 const cityName = document.getElementById('cityName')
 const image = document.getElementById("whetherImage");
