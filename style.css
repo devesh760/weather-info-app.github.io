@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    color:#fff;
+    color:#343260;
 }
 body{
     height: 100vh;
@@ -13,7 +13,8 @@ body{
     overflow: hidden;
     width: 100%;
     height: 100%;
-    background-color: #5DCAFA;
+    /* background-color: #5DCAFA; */
+    background: linear-gradient(#FAE177,#FFBE94);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -23,7 +24,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #5AD3FB;
+    /* background-color: #5AD3FB; */
+    background:#FAE177;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
     padding: 5px 10px;
     flex-wrap: wrap;
@@ -55,6 +57,9 @@ body header  input{
     color: black;
     margin: 0 5px;
     margin-left: 30px;
+    background-color: #FFBE94;
+    border: 1px solid black;
+    border-radius: 3px;
 }
 hr{
     width: 0;
@@ -75,7 +80,8 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #5AD3FB;
+    /* background-color: #5AD3FB; */
+    background: linear-gradient(#FAE177,#FFBE94);
     width: 400px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
     border-radius: 5px;
@@ -155,7 +161,7 @@ section{
 .nothing-found{
     position: fixed;
     z-index: 1000;
-    color: b#fff;
+    color: #fff;
     top: 50%;
     background-color: #343260;
     padding: 10px 20px;
